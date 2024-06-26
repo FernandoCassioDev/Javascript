@@ -15,9 +15,9 @@ let descontos = leia.questionFloat("Digite o valor dos descontos: ", {
   limitMessage: "Digite um numero real.",
 });
 
-
 //calcula o salário líquido
 let salarioLiquido =
-  salarioBruto + adicionalNoturno + horaExtra * 5 - descontos;
+  salarioBruto + adicionalNoturno + (horaExtra * 5) - descontos;
 
+ //mostra o salario liquido no console 
 console.log(`O salário liquido é: ${salarioLiquido.toFixed(2)}`);
