@@ -25,31 +25,37 @@ while (continua == true) {
     limitMessage: "Digite um numero valido",
   });
 
+  //contabiliza quantos colabodares são desenvolvedores backend
   switch (stack) {
     case 1:
       backEnd++;
       break;
   }
 
+  //contabiliza quantas mulheres são desenvolvedoras frontend
   if (genero == 1 || genero == 4) {
     if (stack == 2) {
       mulherFrontend++;
     }
   }
 
+  //contabiliza quantos homens são desenvolvedores mobile
   if (genero == 2 || genero == 5) {
     if (stack == 3 && idade > 40) {
       homemMobile++;
     }
   }
 
+  //contabiliza quantas pessoas não binaria são desenvolvedoras fullstack
   if (genero == 3 && stack == 4 && idade < 30) {
     naoBinarioFull++;
   }
 
+  //soma a idade e contabiliza o total de colaboradores 
   somaIdade += idade;
   total++;
 
+  //verifica se o usuario gostaria de cadastrar mais um colaborador
   continua = leia.keyInYNStrict(
     "\nDeseja continuar a leitura de um novo colaborador: ",
     {
@@ -57,6 +63,7 @@ while (continua == true) {
     }
   );
 
+  //caso contrario mostra no console as informações solicitadas
   if (continua == false) {
     console.log(`\nTotal de pessoas desenvolvedoras backend: ${backEnd}`);
     console.log(
